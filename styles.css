@@ -41,3 +41,34 @@ body {
     height: 100%;
     padding: 4rem 1.5rem;
 }
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+img {
+    border-radius: 50%;
+}
+
+.container article:first-child {
+    background-color: var(--Purple-500);
+}
+
+.container article:nth-child(2) {
+    background-color: var(--Grey-500);
+}
+
+.container article:nth-child(3) {
+    background-color: var(--White);
+}
+
+.container article:nth-child(4) {
+    background-color: var(--Dark-blue);
+}
+
+.container article:last-child {
+    background-color: var(--White);
+}
+
