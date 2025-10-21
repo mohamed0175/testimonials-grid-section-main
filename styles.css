@@ -28,3 +28,16 @@
     font-style: normal;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    padding: 4rem 1.5rem;
+}
