@@ -16,7 +16,7 @@
 
 @font-face {
     font-family: "Barlow Semi Condensed";
-    src: url(fonts/BarlowSemiCondensed-Medium.ttf);
+    src: url(fonts/BarlowSemiCondensed-Regular.ttf);
     font-weight: 500;
     font-style: normal;
 }
@@ -31,44 +31,166 @@
 * {
     margin: 0;
     padding: 0;
-}
-
-html {
-    height: 100%;
+    box-sizing: border-box;
 }
 
 body {
-    height: 100%;
     padding: 4rem 1.5rem;
+    background-color: var(--Grey-100);
+    display: flex;
+    justify-content: center;
 }
 
 .container {
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    align-items: center;
+}
+
+.container article {
+    padding: 3rem;
+    border-radius: 10px;
+    box-shadow: 2rem 2rem 4rem var(--Grey-200);
+}
+
+
+/* start of header section */
+article header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
 }
 
 img {
     border-radius: 50%;
+    width: 2.6923rem;
+    aspect-ratio: 1 / 1;
 }
 
+.name {
+    height: min-content;
+}
+
+.name h2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.name h3 {
+    font-size: 1rem;
+    font-weight: 400;
+}
+/* end of header section */
+
+
+/* start of general cards edits */
+section p:first-child {
+    font-weight: 600;
+    font-size: 1.7rem;
+    margin: 1.5rem 0;
+}
+
+section p:last-child {
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+/* end of general cards edits */
+
+
+
+/* 1st card specific edits start */
 .container article:first-child {
     background-color: var(--Purple-500);
+    color: var(--White);
 }
 
+.container article:first-child img {
+    box-shadow: 0 0 0 2px var(--Purple-300);
+}
+/* end of 1st card */
+
+
+/* 2nd card specific edits start */
 .container article:nth-child(2) {
     background-color: var(--Grey-500);
+    color: var(--White);
 }
+/* end of 2nd card */
 
+
+/* 3rd card specific edits start */
 .container article:nth-child(3) {
     background-color: var(--White);
+    color: var(--Grey-500);
 }
+/* end of 3rd card */
 
+
+/* 4th card specific edits start */
 .container article:nth-child(4) {
     background-color: var(--Dark-blue);
+    color: var(--White);
 }
 
+.container article:nth-child(4) img {
+    box-shadow: 0 0 0 2px var(--Purple-500);
+}
+/* end of 4th card */
+
+
+/* 5th card specific edits start */
 .container article:last-child {
     background-color: var(--White);
+    color: var(--Grey-500);
+}
+/* end of 5th card */
+
+
+@media(min-width: 806px) {
+    .container {
+        max-width: 58.98rem;
+    }
 }
 
+@media(min-width: 1400px) {
+    html {
+        height: 100%;
+    }
+
+    body {
+        height: 100%;
+    }
+
+    .container {
+        max-width: inherit;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        padding: 10rem 5rem;
+    }
+
+    .container article {
+        height: 100%;
+    }
+
+    .container article:first-child {
+        grid-area: 1 / 1 / 2 / 3;
+    }
+
+    .container article:nth-child(2) {
+        grid-area: 1 / 3 / 2 / 4;
+    }
+
+    .container article:nth-child(3) {
+        grid-area: 2 / 1 / 3 / 2;
+    }
+
+    .container article:nth-child(4) {
+        grid-area: 2 / 2 / 3 / 4;
+    }
+
+    .container article:last-child {
+        grid-area: 1 / 4 / 3 / 5;
+    }
+}
