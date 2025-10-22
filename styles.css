@@ -39,6 +39,7 @@ body {
     background-color: var(--Grey-100);
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .container {
@@ -154,6 +155,10 @@ section p:last-child {
 }
 
 @media(min-width: 989px) {
+    html, body{
+        height: 100%;
+    }
+
     .container {
         max-width: inherit;
         display: grid;
@@ -164,6 +169,10 @@ section p:last-child {
 
     .container article {
         height: 100%;
+    }
+
+    section p:last-child {
+         line-height: 1.4;
     }
 
     .container article:first-child {
