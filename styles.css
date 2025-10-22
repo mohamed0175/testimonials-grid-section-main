@@ -153,13 +153,13 @@ section p:last-child {
     }
 }
 
-@media(min-width: 1400px) {
+@media(min-width: 989px) {
     html {
-        height: 100%;
+        /* height: 100%; */
     }
 
     body {
-        height: 100%;
+        /* height: 100%; */
     }
 
     .container {
@@ -167,7 +167,7 @@ section p:last-child {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(2, 1fr);
-        padding: 10rem 5rem;
+        padding: 6vh 10vw;
     }
 
     .container article {
@@ -176,6 +176,9 @@ section p:last-child {
 
     .container article:first-child {
         grid-area: 1 / 1 / 2 / 3;
+        background-image: url(images/bg-pattern-quotation.svg);
+        background-repeat: no-repeat;
+        background-position: 80% 0;
     }
 
     .container article:nth-child(2) {
